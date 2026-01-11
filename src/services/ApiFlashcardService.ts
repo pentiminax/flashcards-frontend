@@ -13,8 +13,8 @@ interface BackendFlashcard {
 export class ApiFlashcardService implements FlashcardService {
     private baseUrl: string;
 
-    constructor(baseUrl: string = import.meta.env.VITE_API_BASE_URL || '/api/flashcards') {
-        this.baseUrl = baseUrl;
+    constructor() {
+        this.baseUrl = import.meta.env.VITE_API_BASE_URL || '/api/flashcards';
     }
 
     private mapToDomain(backendCard: BackendFlashcard): Flashcard {
