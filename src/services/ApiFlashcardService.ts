@@ -14,7 +14,7 @@ export class ApiFlashcardService implements FlashcardService {
     private baseUrl: string;
 
     constructor() {
-        this.baseUrl = import.meta.env.VITE_API_BASE_URL || '/api/flashcards';
+        this.baseUrl = import.meta.env.VITE_API_SERVER_NAME + '/api/flashcards';
     }
 
     private mapToDomain(backendCard: BackendFlashcard): Flashcard {
